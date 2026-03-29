@@ -25,6 +25,12 @@
 Перевірка табилці location:
 <img width="1084" height="665" alt="{A5C6C2A5-F572-4FD7-868C-DE390E10010A}" src="https://github.com/user-attachments/assets/f1ed5a86-852d-40ad-9412-94935379b573" />
 
+Перевірка табилці creature:
+
+<img width="1422" height="842" alt="{97EDDD44-B92F-4ACD-AC8B-412E7CC00AD3}" src="https://github.com/user-attachments/assets/29dad549-e207-42c1-bd63-1bc7afab7353" />
+
+
+
 Отже після всіх тестів я перевір на роботоспособність мою схему.
 
 У ході виконня лабораторної роботи я більше дізнався про SQL-скрипти, а саме оператори Create Table та INSERT
