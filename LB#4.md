@@ -1,10 +1,10 @@
 # Лабораторна робота 4: Аналітичні SQL-запити (OLAP)
 
 
+МЕТА
 
 
-
-Агрегатні функції, такі як COUNT, SUM, AVG, MIN та MAX:
+Використання агрегатних функцій, таких як COUNT, SUM, AVG, MIN та MAX:
 
 COUNT:
 
@@ -36,3 +36,34 @@ MAX:
 
 
 ---------
+
+Використання різних типів джоінів (LEFT JOIN, RIGHT JOIN, FULL JOIN, CROSS JOIN):
+
+LEFT JOIN:
+
+
+<img width="825" height="610" alt="{23A7494B-260F-4336-A002-BC8C32A0D93E}" src="https://github.com/user-attachments/assets/b036b7d3-ec9c-4a60-b8fa-aeb3856698e8" />
+
+
+RIGHT JOIN:
+
+
+<img width="751" height="623" alt="{6511552A-FBFD-4D3A-811A-325404C6122E}" src="https://github.com/user-attachments/assets/2fff15b6-cb9b-4a4b-bcb4-d8e2034447a9" />
+
+
+FULL JOIN:
+
+
+<img width="791" height="628" alt="{0B9B35E8-ABCC-4263-9C52-986FA8E3301F}" src="https://github.com/user-attachments/assets/271e49b3-6aa4-4d0b-96db-915b3b1daf6f" />
+
+
+CROSS JOIN:
+
+
+<img width="633" height="843" alt="{219E7AE9-CA36-42B3-A705-6DBD0645DDE4}" src="https://github.com/user-attachments/assets/ef257e30-ecff-40e9-a62e-0f1dfb869959" />
+
+
+---------
+
+Використання підзапитів (вибірка з підзапитом у SELECT, WHERE, або HAVING)
+
