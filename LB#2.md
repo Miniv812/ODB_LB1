@@ -19,6 +19,7 @@
 <img width="1292" height="843" alt="{940F02D9-C35F-40DC-991B-DD00D3DBDE49}" src="https://github.com/user-attachments/assets/cff8320f-ede2-48e7-a989-974f1523091a" />
 
 Перевірка табилці player_item:
+
 <img width="660" height="879" alt="{145C9C47-6612-41AD-8EEB-0ACF1911B0EC}" src="https://github.com/user-attachments/assets/996d93ac-aeb1-4e30-bbba-3ad0eed885f7" />
 
 Перевірка табилці location:
