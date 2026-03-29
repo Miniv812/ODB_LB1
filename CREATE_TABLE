@@ -9,6 +9,8 @@ create table if not exists "user"(
 	user_starting_date date NOT NULL
 );
 
+/// Отже у нас є Юзер у якого є ПК, ім'я має бути унікальним від інших так само як і імейл
+
 create table if not exists guild(
 	guild_id SERIAL PRIMARY KEY,
 	guild_name varchar(50) NOT NULL UNIQUE,
@@ -17,6 +19,8 @@ create table if not exists guild(
 	guild_date_start date NOT NULL,
 	guild_reputation int NOT NULL check(guild_reputation >= 0 and guild_reputation <= 10000)
 );
+
+/// Для гільдії також застосовується ПК, унікальне ім'я, опис гільдії не є обов'язковим, і так далі
 
 create type player_class as enum('Маг','Воін','Стрелок');
 
@@ -30,6 +34,9 @@ create table if not exists player(
 	guild_id int NULL references guild(guild_id)
 );
 
+/// Для гравця також застосовується ПК, унікальне ім'я, опис характеристик, і перевірка на належність до гільдії та певної реальної людини
+
+
 create table if not exists item(
 	item_id SERIAL PRIMARY KEY,
 	item_name varchar(30) NOT NULL,
@@ -39,12 +46,16 @@ create table if not exists item(
 	Item_tradeable BOOLEAN NOT NULL	
 );
 
+/// Створення предметів, застосовується ПК, назва, опис за бажанням, опис характеристик, вартість та перевірка на те чи може він передаватися
+
 create table if not exists player_item(
 	player_id int references player(player_id),
 	item_id int references item(item_id),
 	quantity int NOT NULL DEFAULT 1,
 	PRIMARY KEY(player_id, item_id)
 );
+
+/// Зв'язок належності предмета до гравця
 
 create type local_size as enum('Мала','Середня','Велика');
 create type local_complexity as enum('Легка','Середня','Важка');
@@ -57,10 +68,14 @@ create table if not exists "location"(
 	location_min_lvl int NOT NULL check(location_min_lvl >= 1)
 );
 
+/// Створення локації з ПК, унікальним Ім'ям та іншими характеристиками
+
 create table if not exists location_guild(
 	guild_id int UNIQUE references guild(guild_id),
 	location_id int UNIQUE references "location"(location_id)
 );
+
+/// Розташування гільдії
 
 create type creature_types as enum('Тварина','Елементаль','Демон','Механізм','Мурлок');
 create type creature_types_damage as enum('Вогняний','Елементальний','Ближній','Дальній','Магічний');
@@ -73,6 +88,8 @@ create table if not exists creature(
 	creature_characteristics text NOT NULL,
 	creature_type_damage creature_types_damage NOT NULL
 );
+
+/// Створення чудовиськ, з ПК, унікальним ім'ям, описом, з типом та дамагом із списку
 
 create table if not exists creature_location(
 	creature_id int references creature(creature_id),
@@ -118,3 +135,5 @@ create table if not exists quest_guild(
 	guild_id int references guild(guild_id),
 	PRIMARY KEY (quest_id, guild_id)
 );
+
+/// Зв'язки між табллицями
